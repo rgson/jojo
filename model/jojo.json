@@ -1,0 +1,19 @@
+{
+	"cards": [
+		{
+			"name"	: "Åke",
+			"cardno": "1234567890",
+			"backno": "1A2B"
+		},
+		{
+			"name"	: "Rosa",
+			"cardno": "1234567890",
+			"backno": "3C4D"
+		},
+		{
+			"name"	: "Nellie",
+			"cardno": "1234567890",
+			"backno": "5E6F"
+		}
+	]
+}

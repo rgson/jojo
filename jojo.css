@@ -1,0 +1,102 @@
+@import url(http://fonts.googleapis.com/css?family=Comfortaa:700);
+html {
+  font-family: "Arial", sans-serif;
+  background-color: whitesmoke; }
+
+header h1 {
+  font-weight: 500;
+  font-size: 40px;
+  margin: 20px 0 10px 10px;
+  text-align: center; }
+
+main #cards {
+  text-align: justify;
+  -ms-text-justify: distribute-all-lines;
+  text-justify: distribute-all-lines; }
+  main #cards form {
+    vertical-align: top;
+    display: inline-block;
+    margin: 10px auto; }
+  main #cards .stretch {
+    width: 100%;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0; }
+  main #cards .card {
+    position: relative;
+    width: 342.4px;
+    height: 215.92px;
+    background-color: #00c7ab;
+    color: white;
+    box-shadow: 3.2px 3.2px 0 0 #999999;
+    border: none;
+    border-radius: 11.52px;
+    padding: 20px;
+    margin: 10px auto; }
+    main #cards .card > * {
+      margin: 20px;
+      max-width: 302.4px;
+      overflow: hidden; }
+    main #cards .card .name {
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-family: "Comfortaa", sans-serif;
+      text-transform: lowercase;
+      font-style: italic;
+      font-weight: bold;
+      font-size: 80px; }
+    main #cards .card .name:after {
+      content: "\00a0))";
+      font-size: 0.55em;
+      vertical-align: 0.2em;
+      font-family: sans-serif;
+      font-style: normal; }
+    main #cards .card .number {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      color: black;
+      font-size: 16px; }
+    main #cards .card .balance, main #cards .card .error {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      font-size: 20px;
+      font-family: "Comfortaa", sans-serif; }
+    main #cards .card .error .x {
+      color: #b94a48; }
+  main #cards .card:hover {
+    cursor: pointer;
+    background-color: #66ddcc;
+    color: white; }
+    main #cards .card:hover .number {
+      color: #666666; }
+    main #cards .card:hover .error .x {
+      color: #d59291; }
+
+footer #author {
+  display: absolute;
+  bottom: 0;
+  text-align: right; }
+  footer #author > * {
+    display: block;
+    margin: 0; }
+  footer #author a {
+    color: #00c7ab;
+    text-decoration: none; }
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+  @media (min-width: 768px) {
+    .container {
+      width: 750px; } }
+  @media (min-width: 992px) {
+    .container {
+      width: 970px; } }
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px; } }

@@ -1,0 +1,145 @@
+@import url(http://fonts.googleapis.com/css?family=Comfortaa:700)
+
+@function tint($color, $amount: 50%)
+	@if $color == transparent
+		$color: rgba(white, 0)
+	@return mix(white, $color, $amount)
+
+$scale:				0.4 * 10
+
+$card-width:		85.60px	* $scale
+$card-height:		53.98px	* $scale
+$card-depth:		0.8px	* $scale
+$card-border:		2.88px	* $scale
+$card-padding:		5px		* $scale
+$card-name-size:	20px	* $scale
+$card-number-size:	4px		* $scale
+$card-balance-size:	5px		* $scale
+
+$card-bgcolor:		#00c7ab
+$card-light-color:	#fff
+$card-dark-color:	#000
+$card-shadow-color:	#999
+$error-color:		#b94a48
+
+html 
+	font-family: 'Arial', sans-serif
+	background-color: #f5f5f5
+
+header
+
+	h1
+		font-weight: 500
+		font-size: 40px
+		margin: 20px 0 10px 10px
+		text-align: center
+
+main
+
+	#cards
+		text-align: justify
+		-ms-text-justify: distribute-all-lines
+		text-justify: distribute-all-lines
+
+		form
+			vertical-align: top
+			display: inline-block
+			margin: 10px auto
+
+		.stretch
+			width: 100%
+			display: inline-block
+			font-size: 0
+			line-height: 0
+
+		.card 
+			position: relative
+			width: $card-width
+			height: $card-height
+			background-color: $card-bgcolor
+			color: $card-light-color
+			box-shadow: $card-depth $card-depth 0 0 $card-shadow-color
+			border: none
+			border-radius: $card-border
+			padding: $card-padding
+			margin: 10px auto
+
+			> * 
+				margin: $card-padding
+				max-width: $card-width - 2 * $card-padding
+				overflow: hidden
+
+			.name 
+				position: absolute
+				top: 0
+				right: 0
+				font-family: 'Comfortaa', sans-serif
+				text-transform: lowercase
+				font-style: italic
+				font-weight: bold
+				font-size: $card-name-size
+
+			.name:after
+				content: "\00a0))"
+				font-size: 0.55em
+				vertical-align: 0.2em
+				font-family: sans-serif
+				font-style: normal
+
+			.number 
+				position: absolute
+				bottom: 0
+				left: 0
+				color: $card-dark-color
+				font-size: $card-number-size
+
+			.balance, .error 
+				position: absolute
+				bottom: 0
+				right: 0
+				font-size: $card-balance-size
+				font-family: 'Comfortaa', sans-serif
+
+			.error .x 
+				color: $error-color
+
+		.card:hover 
+			cursor: pointer
+			background-color: tint( $card-bgcolor, 40% )
+			color: tint( $card-light-color, 40% )
+
+			.number
+				color: tint( $card-dark-color, 40% )
+
+			.error .x
+				color: tint( $error-color, 40% )
+
+footer
+
+	#author
+		display: absolute
+		bottom: 0
+		text-align: right
+
+		> *
+			display: block
+			margin: 0
+
+		a
+			color: $card-bgcolor
+			text-decoration: none
+
+.container
+	padding-right: 15px
+	padding-left: 15px
+	margin-right: auto
+	margin-left: auto
+
+	@media (min-width: 768px)
+		width: 750px
+
+	@media (min-width: 992px)
+		width: 970px
+
+	@media (min-width: 1200px)
+		width: 1170px
